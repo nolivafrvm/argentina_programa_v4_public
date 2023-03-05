@@ -1,0 +1,51 @@
+# Git | Github
+
+# Git es un herramienta de control de versiones (o sistema de versionado).
+
+# Un Sistema de Control de Versiones es un sistema que registra los
+# cambios realizados en un archivo o conjunto de archivos a lo largo del
+# tiempo, de modo que se puedan recuperar versiones específicas más adelante.
+
+# Para que se usa?
+
+# Compartir código con otras personas.
+# Tener un historial de los cambios realizados en el código.
+# Tener un historial de cambios
+# Saber quién los hizo y cuándo
+# Resolver los conflictos que surjan cuando dos o más personas modifiquen el mismo archivo (merge)
+
+# Comandos utilizados en Git para la configuracion global
+
+- git config --global user.name "TU NOMBRE"
+- git config --global user.email "TU DIRECCION DE EMAIL"
+
+# Comandos utilizados en Git para gestion de ramas
+
+# Permite clonarnos un repositorio remoto.
+- git clone <url_repositorio_remoto>
+
+# Permite saber si se realizaron cambios sobre archivos que aún no fueron commiteados.
+- git status
+
+# Permite agregar uno o varios archivos al área de staging (repositorio local), para que luego éstos sean commiteados (en un mismo commit)
+# y subidos al repositorio remoto.
+
+- git add "file"
+- git add . (Todos los archivos)
+
+#Permite armar y guardar un commit con los archivos que se encuentran en el área de staging (los que previamente fueron
+# agregados con git add).
+
+- git commit –m ‘mensaje’
+
+# Permite subir los commits realizados en nuestro repositorio local al repositorio remoto para que éstos puedan ser descargados por el resto
+# del equipo de trabajo.
+
+- git push <remote> <branch>
+
+# Permite descargar los cambios (commits) desde el repositorio remoto y actualizar al instante el repositorio local para reflejar ese contenido.
+
+- git pull
+
+
+
