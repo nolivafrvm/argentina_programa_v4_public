@@ -6,9 +6,10 @@ public class Ejercicio_ClaseTres_UnoB {
 
     public static void main(String[] args) {
 
-        int cantidadNumeros = 3;
-        int vectorNumeros[] = new int[]{2,5,4,8,6,6,8,2,5};
-        char orden = 'a';
+        //int cantidadNumeros = 3;
+        // Metodo Burbuja
+        int vectorNumeros[] = new int[]{2,40,23,5,7,2};
+        char orden = 'd'; // cambiar a (ascendente) por d (descendente)
         int aux =0;
         for (int i = 0; i < vectorNumeros.length-1; i++) {
             for (int j = 0; j < vectorNumeros.length-i- 1; j++) {

@@ -17,6 +17,8 @@ public class ClaseCuatroComandos {
         // Pasos para leer las lineas de un archivo de texto plano .txt
 
         // Instancio un objeto path que define la ruta del archivo
+        // Para Windows Ejemplo de directorio: "C:\test\test.txt"
+        // Para Linux Ejemplo de directorio: "/home/user/test.txt"
         Path rutaArchivo = Paths.get("C:\\test\\test.txt");
 
         // Instancio una lista con todas las lineas del archivo y paso como parametro
