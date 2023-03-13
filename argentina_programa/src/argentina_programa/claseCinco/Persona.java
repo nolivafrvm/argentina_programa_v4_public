@@ -1,13 +1,57 @@
 package argentina_programa.claseCinco;
 
+// DEFINICION DE CLASE
 public class Persona {
 
+    // VARIABLES DE INSTANCIA / PROPIEDADES
     private String nombre;
     private String apellido;
     private String nroDocumento;
     private char letraCarnet;
     private boolean esSocio;
     private int cantidadHijos;
+    private char colorOjos;
+
+    // CONSTRUCTORES
+    public Persona() {
+
+    }
+
+    public Persona(String nombre, String apellido) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", nroDocumento='" + nroDocumento + '\'' +
+                ", letraCarnet=" + letraCarnet +
+                ", esSocio=" + esSocio +
+                ", cantidadHijos=" + cantidadHijos +
+                ", colorOjos=" + colorOjos +
+                '}';
+    }
+
+    // GETTER & SETTER
+
+    public char getLetraCarnet() {
+        return letraCarnet;
+    }
+
+    public void setLetraCarnet(char letraCarnet) {
+        this.letraCarnet = letraCarnet;
+    }
+
+    public char getColorOjos() {
+        return colorOjos;
+    }
+
+    public void setColorOjos(char colorOjos) {
+        this.colorOjos = colorOjos;
+    }
 
     public String getNombre() {
         return nombre;
