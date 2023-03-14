@@ -1,7 +1,8 @@
-package argentina_programa.claseCinco.turnero;
+package argentina_programa.claseCinco.turnero.entidad;
 
 public class Especialidad {
 
+    private long id;
     private String nombre;
     private String descripcion;
 
@@ -19,5 +20,9 @@ public class Especialidad {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public String grabarArchivo() {
+        return id + ";" + nombre + ";" + descripcion;
     }
 }

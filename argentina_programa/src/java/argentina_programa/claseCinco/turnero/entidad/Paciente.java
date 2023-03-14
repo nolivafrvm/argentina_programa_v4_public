@@ -1,15 +1,22 @@
-package argentina_programa.claseCinco.turnero;
+package argentina_programa.claseCinco.turnero.entidad;
 
-public class Medico {
+public class Paciente {
 
+    private long id;
     private String nombre;
     private String apellido;
     private String dni;
     private String nroMatricula;
     private String nroTelefono;
     private String email;
-    private Especialidad especialidad;
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getNombre() {
         return nombre;
@@ -57,13 +64,5 @@ public class Medico {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public Especialidad getEspecialidad() {
-        return especialidad;
-    }
-
-    public void setEspecialidad(Especialidad especialidad) {
-        this.especialidad = especialidad;
     }
 }

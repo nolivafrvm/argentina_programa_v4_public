@@ -1,4 +1,4 @@
-package argentina_programa.claseCinco.turnero;
+package argentina_programa.claseCinco.turnero.entidad;
 
 public class ObraSocial {
 

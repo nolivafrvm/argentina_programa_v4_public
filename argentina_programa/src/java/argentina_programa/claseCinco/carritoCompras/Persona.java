@@ -1,4 +1,4 @@
-package argentina_programa.claseCinco;
+package argentina_programa.claseCinco.carritoCompras;
 
 // DEFINICION DE CLASE
 public class Persona {

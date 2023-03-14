@@ -1,4 +1,4 @@
-package argentina_programa.claseCinco;
+package argentina_programa.claseCinco.carritoCompras;
 
 import java.time.LocalDate;
 import java.util.Scanner;

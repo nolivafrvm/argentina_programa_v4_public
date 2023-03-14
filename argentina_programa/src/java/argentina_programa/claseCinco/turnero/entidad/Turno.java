@@ -1,4 +1,4 @@
-package argentina_programa.claseCinco.turnero;
+package argentina_programa.claseCinco.turnero.entidad;
 
 import java.time.LocalDate;
 
