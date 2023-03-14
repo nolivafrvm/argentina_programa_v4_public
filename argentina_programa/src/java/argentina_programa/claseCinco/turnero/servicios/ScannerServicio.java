@@ -68,15 +68,15 @@ public class ScannerServicio {
 
         System.out.print("Ingrese el Nro. Matricula:");
         String nroMatricula = scanner.nextLine();
-        medico.setApellido(nroMatricula);
+        medico.setNroMatricula(nroMatricula);
 
         System.out.print("Ingrese el Nro. Telefono:");
         String nroTelefono = scanner.nextLine();
-        medico.setApellido(nroTelefono);
+        medico.setNroTelefono(nroTelefono);
 
         System.out.print("Ingrese el e-mail:");
         String email = scanner.nextLine();
-        medico.setApellido(email);
+        medico.setEmail(email);
         
 //        private Especialidad especialidad;
 

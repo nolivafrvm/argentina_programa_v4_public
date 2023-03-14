@@ -1,9 +1,6 @@
 package argentina_programa.claseCinco.turnero.servicios;
 
-import argentina_programa.claseCinco.turnero.entidad.Especialidad;
-import argentina_programa.claseCinco.turnero.entidad.Medico;
-import argentina_programa.claseCinco.turnero.entidad.Paciente;
-import argentina_programa.claseCinco.turnero.entidad.Turno;
+import argentina_programa.claseCinco.turnero.entidad.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -101,6 +98,14 @@ public class FileServicio {
         escribirArchivo("especialidades", especialidad.grabarArchivo());
     }
 
+    public void registrarMedico(Medico medico) throws IOException {
+        escribirArchivo("medicos", medico.grabarArchivo());
+    }
+
+    public void registrarObraSocial(ObraSocial obraSocial) throws IOException {
+        escribirArchivo("obrasocial", obraSocial.grabarArchivo());
+    }
+
     private Medico materializarMedico(String[] dato_medico) {
         Medico objMedico = new Medico();
         objMedico.setApellido(dato_medico[0]);
@@ -121,8 +126,7 @@ public class FileServicio {
         objPaciente.setApellido(paciente[1]);
         objPaciente.setDni(paciente[2]);
         objPaciente.setEmail(paciente[3]);
-        objPaciente.setNroMatricula(paciente[4]);
-        objPaciente.setNroTelefono(paciente[5]);
+        objPaciente.setNroTelefono(paciente[4]);
 
         return objPaciente;
     }

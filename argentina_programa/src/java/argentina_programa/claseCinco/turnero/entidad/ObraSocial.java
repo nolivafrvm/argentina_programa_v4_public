@@ -38,4 +38,8 @@ public class ObraSocial {
     public void setTokenAuthorizacion(String tokenAuthorizacion) {
         this.tokenAuthorizacion = tokenAuthorizacion;
     }
+
+    public String grabarArchivo() {
+        return id + ";" + nombre + ";" + nroTelefono;
+    }
 }

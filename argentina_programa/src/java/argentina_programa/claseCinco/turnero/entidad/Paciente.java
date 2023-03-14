@@ -6,7 +6,6 @@ public class Paciente {
     private String nombre;
     private String apellido;
     private String dni;
-    private String nroMatricula;
     private String nroTelefono;
     private String email;
 
@@ -42,14 +41,6 @@ public class Paciente {
         this.dni = dni;
     }
 
-    public String getNroMatricula() {
-        return nroMatricula;
-    }
-
-    public void setNroMatricula(String nroMatricula) {
-        this.nroMatricula = nroMatricula;
-    }
-
     public String getNroTelefono() {
         return nroTelefono;
     }
@@ -65,4 +56,9 @@ public class Paciente {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public String grabarArchivo() {
+        return id + ";" + nombre + ";" + apellido + ";" + dni + ";" + nroTelefono + ";" + email;
+    }
+
 }

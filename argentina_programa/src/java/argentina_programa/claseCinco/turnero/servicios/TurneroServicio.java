@@ -33,16 +33,17 @@ public class TurneroServicio {
         return especialidad;
     }
 
-    public Medico registrarMedico() {
+    public Medico registrarMedico() throws IOException {
         // Usamos el servicio de scanner para obtener los datos del medico
         Medico medico = scannerServicio.registrarMedico();
-
+        fileServicio.registrarMedico(medico);
         return medico;
     }
 
-    public ObraSocial registrarObraSocial() {
+    public ObraSocial registrarObraSocial() throws IOException {
         // Usamos el servicio de scanner para obtener los datos de la obra social
         ObraSocial obraSocial = scannerServicio.registrarObraSocial();
+        fileServicio.registrarObraSocial(obraSocial);
         return obraSocial;
     }
 

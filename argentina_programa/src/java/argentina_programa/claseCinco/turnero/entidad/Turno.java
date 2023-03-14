@@ -58,4 +58,8 @@ public class Turno {
     public void setEstado(String estado) {
         this.estado = estado;
     }
+
+    public String grabarArchivo() {
+        return id + ";" + fechaTurno + ";" + getMedico().getId() + ";" + getPaciente().getId() + ";" + getEstado() + ";" + getObservaciones();
+    }
 }
