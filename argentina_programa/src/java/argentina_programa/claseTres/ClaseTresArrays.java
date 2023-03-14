@@ -7,7 +7,7 @@ public class ClaseTresArrays {
     public static void main(String[] args) {
 
         // String class
-        String valueString = "Esto es un string";
+        String valueString = "VariableString";
         System.out.println("Esto es un String: " + valueString);
 
         String[] arrayString = {"Hola", "esto", "es" , "un", "string"};

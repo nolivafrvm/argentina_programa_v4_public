@@ -5,9 +5,9 @@ import java.io.*;
 public class ClaseFile {
     public static void main(String[] args) throws IOException {
 
-        File file = new File("C:\\test\\test.txt");
+        File file = new File("/home/noliva/test.txt");
 
-        if (!file.exists()) {
+        if (!(file).exists()) {
             System.out.println("El file no existe");
         }
 
