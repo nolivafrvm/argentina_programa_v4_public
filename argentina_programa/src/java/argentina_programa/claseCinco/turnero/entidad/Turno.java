@@ -4,11 +4,20 @@ import java.time.LocalDate;
 
 public class Turno {
 
+    private long id;
     private LocalDate fechaTurno;
     private Medico medico;
     private Paciente paciente;
     private String observaciones;
     private String estado;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public LocalDate getFechaTurno() {
         return fechaTurno;
