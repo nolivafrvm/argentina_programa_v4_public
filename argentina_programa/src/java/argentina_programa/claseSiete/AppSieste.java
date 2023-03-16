@@ -28,8 +28,7 @@ public class AppSieste {
             System.out.println(resultado.getAsDouble());
         }
 
-//        personas.stream().
-
+        System.out.println(Persona.metodoClase());
     }
 
     public static OptionalDouble calcularMediaVelocidad(List<Persona> listaPersona) {

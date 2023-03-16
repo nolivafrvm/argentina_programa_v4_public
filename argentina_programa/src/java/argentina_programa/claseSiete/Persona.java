@@ -2,7 +2,7 @@ package argentina_programa.claseSiete;
 
 public abstract class Persona {
 
-    private String nombre;
+    protected String nombre;
 
     public Persona(String nombre) {
         this.nombre = nombre;
@@ -17,5 +17,9 @@ public abstract class Persona {
     }
 
     public abstract int correr();
+
+    static String metodoClase() {
+        return "Hola soy metodo de clase";
+    }
 
 }
