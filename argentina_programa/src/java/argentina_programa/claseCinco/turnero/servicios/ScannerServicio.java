@@ -1,9 +1,13 @@
 package argentina_programa.claseCinco.turnero.servicios;
 
-import argentina_programa.claseCinco.turnero.entidad.Especialidad;
-import argentina_programa.claseCinco.turnero.entidad.Medico;
-import argentina_programa.claseCinco.turnero.entidad.ObraSocial;
+import argentina_programa.claseCinco.turnero.entidad.*;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
 
 public class ScannerServicio {
@@ -49,7 +53,7 @@ public class ScannerServicio {
         return especialidad;
     }
 
-    public Medico registrarMedico() {
+    public Medico registrarMedico(List<Especialidad> especialidades) {
         Medico medico = new Medico();
 
         Scanner scanner = new Scanner(System.in);
@@ -77,11 +81,99 @@ public class ScannerServicio {
         System.out.print("Ingrese el e-mail:");
         String email = scanner.nextLine();
         medico.setEmail(email);
-        
-//        private Especialidad especialidad;
 
+        System.out.println("Ingrese el ID de la especialidad correspondiente");
+        especialidades.forEach(especialidad -> {
+            System.out.println("ID: " + especialidad.getId() + " Nombre: " + especialidad.getNombre() + " Descripción: " + especialidad.getDescripcion()) ;
+        });
+        System.out.println("Especialidad elegida>:");
+        String idEspecialidad = scanner.nextLine();
+        especialidades.forEach(especialidad -> {
+            if (String.valueOf(especialidad.getId()).equalsIgnoreCase(idEspecialidad)) {
+                medico.setEspecialidad(especialidad);
+            }
+        });
+        if (medico.getEspecialidad()==null) {
+            System.out.println("La especialidad elegida no corresponde:");
+        }
+        
         return medico;
     }
+
+    public Paciente registrarPaciente() {
+        Paciente paciente = new Paciente();
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese el nombre:");
+
+        String nombre  = scanner.nextLine();
+        paciente.setNombre(nombre);
+
+        System.out.print("Ingrese el apellido:");
+        String apellido = scanner.nextLine();
+        paciente.setApellido(apellido);
+
+        System.out.print("Ingrese el dni:");
+        String dni = scanner.nextLine();
+        paciente.setDni(dni);
+
+        System.out.print("Ingrese el Nro. Telefono:");
+        String nroTelefono = scanner.nextLine();
+        paciente.setNroTelefono(nroTelefono);
+
+        System.out.print("Ingrese el e-mail:");
+        String email = scanner.nextLine();
+        paciente.setEmail(email);
+
+//        private Especialidad especialidad;
+
+        return paciente;
+    }
+
+    public Turno registrarTurno(List<Medico> medicos) throws ParseException {
+        Turno turno = new Turno();
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese la fecha (Formato \"dd/MM/yyyy hh:mm\" 12):");
+        String fecha = scanner.nextLine();
+
+        LocalDate fechaValue= LocalDate.parse(fecha,  DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm"));
+        turno.setFechaTurno(fechaValue);
+
+        System.out.println("Ingrese el medico que requiera:");
+        medicos.forEach(medico -> {
+//            System.out.println("Id:" + medico.getId() + " Nombre: " + medico.getNombre() + " Apellido " + " Especialidad: " + medico.getEspecialidad().getNombre());
+            System.out.println("Id:" + medico.getId() + " Nombre: " + medico.getNombre() + " Apellido " + medico.getApellido() + " Especialidad: ");
+        });
+
+        String idMedico = scanner.nextLine();
+        medicos.forEach(medico -> {
+            if (idMedico.equalsIgnoreCase(String.valueOf(medico.getId()))) {
+                turno.setMedico(medico);
+            }
+        });
+        if (turno.getMedico()==null) {
+            System.out.println("No se selecciono el medico correctamente");
+        }
+
+        System.out.println("Ingrese las observaciones: ");
+        String observacion = scanner.nextLine();
+        turno.setObservaciones(observacion);
+
+        turno.setEstado("Iniciado");
+        
+        return turno;
+    }
+
+    public String solicitarDni() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese su D.N.I:");
+
+        String dni  = scanner.nextLine();
+
+        return dni;
+    }
+
 
     public ObraSocial registrarObraSocial() {
         ObraSocial obraSocial = new ObraSocial();

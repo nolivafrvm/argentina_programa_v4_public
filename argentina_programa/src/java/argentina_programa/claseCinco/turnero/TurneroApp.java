@@ -5,6 +5,7 @@ import argentina_programa.claseCinco.turnero.servicios.ScannerServicio;
 import argentina_programa.claseCinco.turnero.servicios.TurneroServicio;
 
 import java.io.IOException;
+import java.text.ParseException;
 
 public class TurneroApp {
 
@@ -12,9 +13,9 @@ public class TurneroApp {
     private static final ScannerServicio scannerServicio = new ScannerServicio();
     private static final TurneroServicio turneroServicio = new TurneroServicio(fileServicio, scannerServicio);
     private static String opcionMenu = "-1";
-    private static final String modoPanel = "admin"; // Usar admin o usuario
+    private static final String modoPanel = "usuario"; // Usar admin o usuario
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, ParseException {
         // Controlando la creación de archivos necesarios
         System.out.println("Verificar la ruta absoluta dependiendo su sistema operativo...");
         turneroServicio.verificarArchivos();
@@ -26,7 +27,7 @@ public class TurneroApp {
             if (modoPanel.equalsIgnoreCase("admin")) {   // Panel de administración
                 switch (opcionMenu) {
                     case "1":
-                        System.out.println("Ingresando a 1Registrar Especialidad");
+                        System.out.println("Ingresando a Registrar Especialidad");
                         turneroServicio.registrarEspecialidad();
                         break;
                     case "2":
@@ -42,7 +43,7 @@ public class TurneroApp {
                         turneroServicio.verPacientes();
                         break;
                     case "5":
-                        System.out.println("Ingresando a ver pacientes");
+                        System.out.println("Ingresando a ver turnos");
                         turneroServicio.verTurnos();
                         break;
                     case "6":
@@ -55,6 +56,7 @@ public class TurneroApp {
                 switch (opcionMenu) {
                     case "1":
                         System.out.println("Ingresando a la funcionalidad para registrar un turno:");
+                        turneroServicio.registrarTurno();
                         break;
                     case "2":
                         System.out.println("Saliendo de la aplicación:");
