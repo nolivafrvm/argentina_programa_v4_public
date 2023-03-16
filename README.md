@@ -13,3 +13,13 @@ Arrays & Strings
 # Package Clase 4
 Programas & Funciones/Metodos | Entradas y Salidas | Archivos
 
+# Package Clase 5
+Introducción a la programación OO en Java
+
+# Package Clase 6
+Testing
+
+# Package Clase 7
+Herencia - Principios de la Programación Orientada A Objetos 
+(Abstracción, Encapsulamiento, Herencia y Polimorfismo) 
+
