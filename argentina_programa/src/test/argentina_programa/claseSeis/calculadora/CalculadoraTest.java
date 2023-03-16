@@ -1,16 +1,25 @@
 package argentina_programa.claseSeis.calculadora;
 
 import argentina_programa.claseSeis.Calculadora;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CalculadoraTest {
 
+    Calculadora calculadora;
+
+    @BeforeEach
+    void setUp() {
+        calculadora = new Calculadora();
+    }
 
     @Test
+    @DisplayName("Testing de suma")
     void sumar_ok(){
-        Calculadora calculadora = new Calculadora();
+
 
         double resultado = calculadora.sumar(150, 30);
 
@@ -19,7 +28,6 @@ public class CalculadoraTest {
 
     @Test
     void multiplicar_ok(){
-        Calculadora calculadora = new Calculadora();
 
         double resultado = calculadora.multiplicar(80, 3);
 
@@ -47,7 +55,6 @@ public class CalculadoraTest {
 
     @Test
     void restar_multiplicar_ok(){
-        Calculadora calculadora = new Calculadora();
 
         double resultado = calculadora.restar(90, 50);
         resultado = calculadora.multiplicar(resultado, 15);
@@ -57,7 +64,6 @@ public class CalculadoraTest {
 
     @Test
     void sumar_multiplicar_ok(){
-        Calculadora calculadora = new Calculadora();
 
         double resultado = calculadora.sumar(70, 40);
         resultado = calculadora.multiplicar(resultado, 25);
