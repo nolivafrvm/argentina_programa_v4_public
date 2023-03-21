@@ -57,13 +57,11 @@ public class ScannerServicio {
         Medico medico = new Medico();
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Ingrese el nombre:");
 
-        String nombre  = scanner.nextLine();
+        String nombre = checkCamposCompletos(scanner, "Ingrese el nombre: ");
         medico.setNombre(nombre);
 
-        System.out.print("Ingrese el apellido:");
-        String apellido = scanner.nextLine();
+        String apellido = checkCamposCompletos(scanner, "Ingrese el apellido: ");
         medico.setApellido(apellido);
 
         System.out.print("Ingrese el dni:");
@@ -98,6 +96,15 @@ public class ScannerServicio {
         }
         
         return medico;
+    }
+
+    private String checkCamposCompletos(Scanner scanner, String textoAmostrar) {
+        String valor = "";
+        while (valor.equalsIgnoreCase("")) {
+            System.out.print(textoAmostrar);
+            valor = scanner.nextLine();
+        }
+        return valor;
     }
 
     public Paciente registrarPaciente() {
