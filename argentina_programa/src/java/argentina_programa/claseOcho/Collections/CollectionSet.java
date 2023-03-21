@@ -25,6 +25,22 @@ public class CollectionSet {
 
         System.out.println(hashSet.size());
 
+        ClaseHash claseHash_1 = new ClaseHash();
+        claseHash_1.setNombre("nombre_1");
+        claseHash_1.setDescripcion("descripcion_1");
+
+        ClaseHash claseHash_2 = new ClaseHash();
+        claseHash_2.setNombre("nombre_2");
+        claseHash_2.setDescripcion("descripcion_2");
+
+        hashSet = new HashSet();
+
+        hashSet.add(claseHash_1);
+        hashSet.add(claseHash_2);
+
+        System.out.println(hashSet.size());
+
+
     }
 
 }
