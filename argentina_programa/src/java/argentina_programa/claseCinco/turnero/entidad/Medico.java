@@ -74,4 +74,12 @@ public class Medico {
     public void setEspecialidad(Especialidad especialidad) {
         this.especialidad = especialidad;
     }
+
+    public String grabarArchivo() {
+        if (getEspecialidad() != null) {
+            return id + ";" + nombre + ";" + apellido + ";" + dni + ";" + nroMatricula + ";" + nroTelefono + ";" + email + ";" + getEspecialidad().getId();
+        } else {
+            return id + ";" + nombre + ";" + apellido + ";" + dni + ";" + nroMatricula + ";" + nroTelefono + ";" + email + ";";
+        }
+    }
 }

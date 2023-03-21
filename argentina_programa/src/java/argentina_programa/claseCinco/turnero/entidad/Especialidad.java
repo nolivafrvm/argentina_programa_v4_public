@@ -22,6 +22,14 @@ public class Especialidad {
         this.descripcion = descripcion;
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public String grabarArchivo() {
         return id + ";" + nombre + ";" + descripcion;
     }
