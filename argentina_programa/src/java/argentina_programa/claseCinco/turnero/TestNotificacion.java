@@ -18,6 +18,10 @@ public class TestNotificacion {
 
         System.out.println(notificacionSMS.notificar());
         System.out.println(notificacionEmail.notificar());
+
+        float a = 0.2f;
+        float b = 0.1f;
+        System.out.println("SUMA de a b :" + (a + b));
     }
 
 }

@@ -62,4 +62,16 @@ public class Turno {
     public String grabarArchivo() {
         return id + ";" + fechaTurno + ";" + getMedico().getId() + ";" + getPaciente().getId() + ";" + getEstado() + ";" + getObservaciones();
     }
+
+    @Override
+    public String toString() {
+        return "Turno{" +
+                "id=" + id +
+                ", fechaTurno=" + fechaTurno +
+                ", medico=" + medico +
+                ", paciente=" + paciente +
+                ", observaciones='" + observaciones + '\'' +
+                ", estado='" + estado + '\'' +
+                '}';
+    }
 }
