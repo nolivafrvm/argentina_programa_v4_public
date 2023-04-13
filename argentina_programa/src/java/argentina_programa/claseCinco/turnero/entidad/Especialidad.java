@@ -33,4 +33,13 @@ public class Especialidad {
     public String grabarArchivo() {
         return id + ";" + nombre + ";" + descripcion;
     }
+
+    @Override
+    public String toString() {
+        return "Especialidad{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", descripcion='" + descripcion + '\'' +
+                '}';
+    }
 }
