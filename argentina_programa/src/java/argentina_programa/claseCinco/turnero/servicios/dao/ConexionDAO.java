@@ -3,6 +3,7 @@ package argentina_programa.claseCinco.turnero.servicios.dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Properties;
 
 public class ConexionDAO { // Encargada de gestionar las conexiones
 
@@ -23,6 +24,7 @@ public class ConexionDAO { // Encargada de gestionar las conexiones
     private Connection connection;    // Solo declaramos la variable/objeto
 
     public Connection conectar() {
+
         // Aca vamos conectar
         this.setDireccionIP("jdbc:mysql://localhost:"); // direccion ip de mi mismo // loopback
         this.setPuerto("3306");

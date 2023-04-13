@@ -28,6 +28,39 @@ public class EspecialidadDAO extends ConexionDAO {
         }
     }
 
+
+    public void modificarEspecialidad(Especialidad especialidad) throws SQLException {
+        try {
+            this.conectar();
+            String query = "UPDATE especialidades SET nombre=?, descripcion=? WHERE id=?";
+            PreparedStatement ps = this.getConnection().prepareStatement(query);
+            // DESMATERIALIZAMOS
+            ps.setString(1, especialidad.getNombre());
+            ps.setString(2, especialidad.getDescripcion());
+            ps.setLong(3, especialidad.getId());
+            ps.executeUpdate();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            this.cerrarConexion();
+        }
+    }
+
+    public void eliminarEspecialidad(Especialidad especialidad) throws SQLException {
+        try {
+            this.conectar();
+            String query = "DELETE FROM especialidades WHERE id=?";
+            PreparedStatement ps = this.getConnection().prepareStatement(query);
+            // DESMATERIALIZAMOS
+            ps.setLong(1, especialidad.getId());
+            ps.executeUpdate();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            this.cerrarConexion();
+        }
+    }
+
     public List<Especialidad> listarEspecialidadesDB() {
         try {
             this.conectar();

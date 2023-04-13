@@ -12,23 +12,23 @@ public class TestConexionDAO {
 //        ConexionDAO conexionDAO = new ConexionDAO();
 //        conexionDAO.conectar();
 
-//        Especialidad especialidad = new Especialidad();
-//        especialidad.setId(3);
-//        especialidad.setNombre("Cardiologo");
-//        especialidad.setDescripcion("Rama de la medicina del corazon");
+        Especialidad especialidad = new Especialidad();
+        especialidad.setId(4);
+        especialidad.setNombre("Pediatria");
+        especialidad.setDescripcion("Rama de la medicina de los niños");
 //
         EspecialidadDAO especialidadDAO = new EspecialidadDAO();
-//        especialidadDAO.agregarEspecialidad(especialidad);
+        especialidadDAO.eliminarEspecialidad(especialidad);
 
 
-        List<Especialidad> listaEspecialidad = new ArrayList<>();
-        listaEspecialidad = especialidadDAO.listarEspecialidadesDB();
-
-        if (!listaEspecialidad.isEmpty()) {
-            listaEspecialidad.forEach(especialidadDB -> {
-                System.out.println(especialidadDB.toString());
-            });
-        }
+//        List<Especialidad> listaEspecialidad = new ArrayList<>();
+//        listaEspecialidad = especialidadDAO.listarEspecialidadesDB();
+//
+//        if (!listaEspecialidad.isEmpty()) {
+//            listaEspecialidad.forEach(especialidadDB -> {
+//                System.out.println(especialidadDB.toString());
+//            });
+//        }
 
     }
 

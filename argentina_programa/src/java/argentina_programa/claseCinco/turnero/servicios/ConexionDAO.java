@@ -105,6 +105,7 @@ public class ConexionDAO {
         try {
             Properties prop = new Properties();
             String home = System.getProperty("user.dir");
+            System.out.println("Directorio: " + home);
             File f = new File(home + "/propiedades.properties"); // da una ruta absoluta al archivo
             prop.load(new FileInputStream(f));
             servidor = (prop.getProperty("servidor"));
