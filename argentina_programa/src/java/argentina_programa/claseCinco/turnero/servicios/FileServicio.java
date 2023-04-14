@@ -14,8 +14,8 @@ import java.util.Optional;
 
 public class FileServicio {
 
-//    private static final String absoluthPath = "/home/noliva/" ; // Para linux
-    private static final String absoluthPath = "C:\\appTurnero\\" ; // Para windows
+    private static final String absoluthPath = "/home/noliva/" ; // Para linux
+//    private static final String absoluthPath = "C:\\appTurnero\\" ; // Para windows
 
     private boolean escribirArchivo(String archivo, String textoAGrabar) throws IOException {
         Path rutaArchivo = Paths.get(absoluthPath + archivo + ".txt");

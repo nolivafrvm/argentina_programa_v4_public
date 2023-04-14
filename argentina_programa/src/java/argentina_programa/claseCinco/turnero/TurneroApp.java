@@ -13,7 +13,7 @@ public class TurneroApp {
     private static final ScannerServicio scannerServicio = new ScannerServicio();
     private static final TurneroServicio turneroServicio = new TurneroServicio(fileServicio, scannerServicio);
     private static String opcionMenu = "-1";
-    private static final String modoPanel = "usuario"; // Usar admin o usuario
+    private static final String modoPanel = "admin"; // Usar admin o usuario
 
     public static void main(String[] args) throws IOException, ParseException {
         // Controlando la creación de archivos necesarios

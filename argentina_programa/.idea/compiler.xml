@@ -9,8 +9,5 @@
         <module name="argentina_programa" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="argentina_programa" target="11" />
-    </bytecodeTargetLevel>
   </component>
 </project>

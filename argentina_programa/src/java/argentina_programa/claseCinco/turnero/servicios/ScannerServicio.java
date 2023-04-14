@@ -68,17 +68,15 @@ public class ScannerServicio {
         String dni = scanner.nextLine();
         medico.setDni(dni);
 
-        System.out.print("Ingrese el Nro. Matricula:");
-        String nroMatricula = scanner.nextLine();
-        medico.setNroMatricula(nroMatricula);
+        String nroMatricula = checkExpressionRegular(scanner, "Ingrese el Nro. Matricula:","[a-zA-Z][a-zA-Z]\\-[0-9]{4}");
 
         System.out.print("Ingrese el Nro. Telefono:");
         String nroTelefono = scanner.nextLine();
         medico.setNroTelefono(nroTelefono);
 
-        System.out.print("Ingrese el e-mail:");
-        String email = scanner.nextLine();
-        medico.setEmail(email);
+
+        String email = checkExpressionRegular(scanner, "Ingrese su correo:", "([a-z]|[0-9])+@[a-z]+\\.[a-z]{2,3}");
+
 
         System.out.println("Ingrese el ID de la especialidad correspondiente");
         especialidades.forEach(especialidad -> {
@@ -96,6 +94,15 @@ public class ScannerServicio {
         }
         
         return medico;
+    }
+
+    private String checkExpressionRegular(Scanner scanner, String textoAmostrar, String expresionRegular) {
+        String valor = "";
+        while (!valor.matches(expresionRegular)) {
+            System.out.println(textoAmostrar);
+            valor = scanner.nextLine();
+        }
+        return valor;
     }
 
     private String checkCamposCompletos(Scanner scanner, String textoAmostrar) {
